@@ -3,13 +3,14 @@ require 'json'
 
 module OmniAuth
   module Strategies
-    class Twitter < OmniAuth::Strategies::OAuth
-      option :name, 'twitter'
-
-      option :client_options, {:authorize_path => '/oauth/authenticate',
-                               :site => 'https://api.twitter.com',
-                               :proxy => ENV['http_proxy'] ? URI(ENV['http_proxy']) : nil}
-
+    class Twitter_band < OmniAuth::Strategies::OAuth
+      option :name, 'twitter_band'
+      
+      option :client_options {:authorize_path => 'oauth/authenticate',
+                              :site => 'https:api.twitter.com',
+                              :proxy => ENV['http_proxy'] ? URI(ENV['http_proxy']) : nil,
+                              :callback_path => 'band/auth/twitter/callback'}
+                              
       uid { access_token.params[:user_id] }
 
       info do
