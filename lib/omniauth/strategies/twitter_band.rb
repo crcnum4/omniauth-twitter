@@ -6,7 +6,7 @@ module OmniAuth
     class Twitter_band < OmniAuth::Strategies::OAuth
       option :name, 'twitter_band'
       
-      option :client_options {:authorize_path => 'oauth/authenticate',
+      option :client_options, {:authorize_path => 'oauth/authenticate',
                               :site => 'https:api.twitter.com',
                               :proxy => ENV['http_proxy'] ? URI(ENV['http_proxy']) : nil,
                               :callback_path => 'band/auth/twitter/callback'}
