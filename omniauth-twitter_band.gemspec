@@ -1,6 +1,6 @@
 # -*- encoding: utf-8 -*-
 $:.push File.expand_path("../lib", __FILE__)
-require "omniauth-twitter/version"
+require "omniauth-twitter_band/version"
 
 Gem::Specification.new do |s|
   s.name        = "omniauth-twitter_band"
